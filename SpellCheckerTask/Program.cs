@@ -27,7 +27,32 @@ namespace SpellCheckerTask
             //Add these suggested words to a spelling list that the user can save as a file to work on
             //their own spelling
 
-
+            Console.WriteLine("Please enter a word in english;");
+            string word = Console.ReadLine();
+            bool valid = false;
+            int count = 0;
+            int wrong = 0;
+            string[] incorrect = { };
+            for (int i = 0; i < words.Length; i++)
+            {
+                if (word == words[i])
+                {
+                    valid = true;
+                }
+            }
+            if (valid = true)
+            {
+                count = count + 1;
+            }
+            else
+            {
+                wrong = wrong + 1;
+                word = incorrect[0];
+            }
+            Console.WriteLine($"The word previously entered was valid: {valid}");
+            Console.WriteLine("Please enter a string of words in english");
+            string wordstring = Console.ReadLine();
+            double score = count/(count/wrong);
 
         }
         static string[] createDictionary()
